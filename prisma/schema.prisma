@@ -9,3 +9,27 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+    id Int @id @default(autoincrement())
+    username String
+    email String @unique
+    password String
+}
+
+model Movie {
+    id Int @id @default(autoincrement())
+    movie_name String @db.VarChar(255)
+    description String @db.VarChar(255)
+    director_name String @db.VarChar(255)
+    release_date DateTime @default(now())
+}
+
+model Review {
+    id Int @id @default(autoincrement())
+    movie_id Int @unique
+    user_id Int @unique
+    rating Int
+    comment String
+}
+
