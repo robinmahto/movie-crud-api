@@ -1,0 +1,26 @@
+{
+  "name": "movie-crud-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinmahto/movie-crud-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinmahto/movie-crud-api/issues"
+  },
+  "homepage": "https://github.com/robinmahto/movie-crud-api#readme",
+  "devDependencies": {
+    "@types/node": "^20.1.2",
+    "prisma": "^4.14.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
