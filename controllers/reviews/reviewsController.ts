@@ -81,7 +81,7 @@ const reviewsController = {
     },
 
    async deletes(req : express.Request, res : express.Response){
-       const id = req.params.id;
+       const id : string = req.params.id;
        try {
         const deleteReviews = await prisma.user.delete({
             where: {
