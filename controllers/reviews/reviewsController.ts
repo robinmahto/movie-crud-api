@@ -20,7 +20,6 @@ const reviewsController = {
        }
 
        const { movie_id, user_id, rating, comment } = req.body;
-
        try {
          const reviews = await prisma.review.create({data:{
             movie_id,
@@ -58,7 +57,7 @@ const reviewsController = {
        }
 
        const { movie_id, user_id, rating, comment } = req.body;
-
+       const id : any = req.params.id;
        try {
          const reviewsUpdate = await prisma.review.update({
              data: {
@@ -68,9 +67,9 @@ const reviewsController = {
                  comment
              },
              where: {
-                 id: undefined,
-                 movie_id: undefined,
-                 user_id: undefined
+                 id,
+                 movie_id,
+                 user_id
              }
          })
          res.json({status: 200, message: reviewsUpdate})
@@ -81,7 +80,7 @@ const reviewsController = {
     },
 
    async deletes(req : express.Request, res : express.Response){
-       const id : string = req.params.id;
+       const id : any = req.params.id;
        try {
         const deleteReviews = await prisma.user.delete({
             where: {

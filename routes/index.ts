@@ -18,14 +18,14 @@ router.post('/changePassword', auth, changePasswordController.changePassword) //
 router.post('/movies', auth, moviesController.post);
 router.get('/movies', auth, moviesController.get);
 router.get('/movies/:id', auth, moviesController.getById);
-router.put('/movies', auth, moviesController.update);
+router.put('/movies/:id', auth, moviesController.update);
 router.delete('/movies', auth, moviesController.deletes);
 
 // reviews
 
 router.post('/reviews', auth, reviewsController.post);
 router.get('/reviews', auth, reviewsController.get);
-router.put('/reviews', auth, reviewsController.update);
+router.put('/reviews/:id', auth, reviewsController.update);
 router.delete('/reviews', auth, reviewsController.deletes);
 
 export default router;
